@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="photos/bg.jpg" class="banner">
+        <a href="#" class="logo">Brand.</a>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>BRAND KO TO</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Eligendi provident praesentium voluptate, voluptates totam,
+            sequi atque non cumque dolorum, dolore labore quisquam! Exercitationem
+             illo magnam culpa excepturi illum quas earum.</p>
+    </section>
+
+        <div class="container">
+            <div class="slider">
+                <div class="slides" style="--img: url('photos/img1.jpg')">
+                    <div class="content"></div>
+                    </div>
+                <div class="slides" style="--img: url('photos/img2.jpg')">
+                    <div class="content"></div>
+                    </div>
+                <div class="slides" style="--img: url('photos/img3.jpg')">
+                    <div class="content"></div>
+                    </div>
+                <div class="slides" style="--img: url('photos/img4.jpg')">
+                    <div class="content"></div>
+                    </div>
+                <div class="slides" style="--img: url('photos/img5.jpg')">
+                    <div class="content"></div>
+                    </div>
+                <div class="slides" style="--img: url('photos/img6.jpg')">
+                    <div class="content"></div>
+                </div>
+            </div>
+            <div class="buttons">
+                <span class="prev"></span>
+                <span class="next"></span>
+            </div>
+        </div>
+
+    <script>
+        let next = document.querySelector('.next');
+        let prev = document.querySelector('.prev');
+        let slider = document.querySelector('.slider');
+    </script>
+
+
+    <!-- Header Script -->
+    <script>
+        window.addEventListener("scroll",function(){
+            const header = document.querySelector('header');
+            header.classList.toggle('sticky',window.scrollY > 0)
+        });
+    </script>
+</body>
+</html>
