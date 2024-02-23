@@ -7,48 +7,75 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <img src="photos/bg.jpg" class="banner">
-        <a href="#" class="logo">Brand.</a>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Team</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
     <section>
-        <h2>BRAND KO TO</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Eligendi provident praesentium voluptate, voluptates totam,
-            sequi atque non cumque dolorum, dolore labore quisquam! Exercitationem
-             illo magnam culpa excepturi illum quas earum.</p>
+        <header>
+            <img src="photos/bg.jpg" class="banner">
+            <a href="#" class="logo">Brand.</a>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="content-land">
+            <div class="textbox">
+                <h2>It's not just Coffee<br>It's <span>Brand.</span></h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit magnam, doloremque maiores</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="imgBox">
+                <img src="photos/coffee2.png" class="coffee">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="photos/cha.png" onclick="imgSlider('photos/cha.png')"></li>
+            <li><img src="photos/tea.png" onclick="imgSlider('photos/tea.png')"></li>
+            <li><img src="photos/cookie.png" onclick="imgSlider('photos/cookie.png')"></li>
+        </ul>
     </section>
-
+    <section id="About">
         <div class="container">
             <div class="slider">
                 <div class="slides" style="--img: url('photos/img1.jpg')">
-                    <div class="content"></div>
+                    <div class="content">
+                        <h2>Coffee</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit magnam, doloremque maiores</p>
                     </div>
+                </div>
                 <div class="slides" style="--img: url('photos/img2.jpg')">
-                    <div class="content"></div>
+                    <div class="content">
+                        <h2>Macha Latte</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit magnam, doloremque maiores</p>
                     </div>
+                </div>
                 <div class="slides" style="--img: url('photos/img3.jpg')">
-                    <div class="content"></div>
+                    <div class="content">
+                        <h2>Pastries</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit magnam, doloremque maiores</p>
                     </div>
+                </div>
                 <div class="slides" style="--img: url('photos/img4.jpg')">
-                    <div class="content"></div>
+                    <div class="content">
+                        <h2>Desserts</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit magnam, doloremque maiores</p>
                     </div>
+                </div>
                 <div class="slides" style="--img: url('photos/img5.jpg')">
-                    <div class="content"></div>
+                    <div class="content">
+                        <h2>Breakfast</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit magnam, doloremque maiores</p>
                     </div>
+                </div>
                 <div class="slides" style="--img: url('photos/img6.jpg')">
-                    <div class="content"></div>
+                    <div class="content">
+                        <h2>Shakes</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit magnam, doloremque maiores</p>
+                    </div>
                 </div>
             </div>
             <div class="buttons">
@@ -56,11 +83,47 @@
                 <span class="next"></span>
             </div>
         </div>
+    </section>
 
+    <!-- FOOTERSSS -->
+    <footer>
+        <nav>
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <p>Copyright &#169; 2023 Virgil Lacsamana. All Rights Reserved</p>
+    </footer>
+
+
+    <!-- LANDING PAGE SCRIPT -->
+
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.coffee').src = anything;
+        }
+    </script>
+  
+   <!--SLIDER SCRIPT-->
+    
     <script>
         let next = document.querySelector('.next');
         let prev = document.querySelector('.prev');
         let slider = document.querySelector('.slider');
+
+        next.addEventListener('click', function(){
+            let slides = document.querySelectorAll('.slides');
+            slider.appendChild(slides[0]);
+        })
+        prev.addEventListener('click', function(){
+            let slides = document.querySelectorAll('.slides');
+            slider.prepend(slides[slides.length - 1]);
+        })
     </script>
 
 
