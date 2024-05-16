@@ -7,10 +7,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+      
     <section>
         <header>
             <img src="photos/bg.jpg" class="banner">
-            <a href="#" class="logo">Brand.</a>
+            <a href="#" class="logo">Solar.</a>
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
@@ -24,8 +28,8 @@
         </header>
         <div class="content-land">
             <div class="textbox">
-                <h2>It's not just Coffee<br>It's <span>Brand.</span></h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit magnam, doloremque maiores</p>
+                <h2>It's not just Coffee<br>It's <span>Solar.</span></h2>
+                <p>"Brand. Coffee" is more than just a coffee shop; it's a daily ritual, a moment of indulgence, and a celebration of quality. Our beans are meticulously sourced from the world's finest coffee-growing regions, ensuring a rich and robust flavor profile in every sip. </p>
                 <a href="#">Learn More</a>
             </div>
             <div class="imgBox">
@@ -44,37 +48,37 @@
                 <div class="slides" style="--img: url('photos/img1.jpg')">
                     <div class="content">
                         <h2>Coffee</h2>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit magnam, doloremque maiores</p>
+                        <p>Enjoy our delicious, freshly brewed coffee everyday!</p>
                     </div>
                 </div>
                 <div class="slides" style="--img: url('photos/img2.jpg')">
                     <div class="content">
                         <h2>Macha Latte</h2>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit magnam, doloremque maiores</p>
+                        <p>Authentic Japanese Green Tea, made from alovera tree and narra leaves!</p>
                     </div>
                 </div>
                 <div class="slides" style="--img: url('photos/img3.jpg')">
                     <div class="content">
                         <h2>Pastries</h2>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit magnam, doloremque maiores</p>
+                        <p>Freshly Baked Pastries Everyday Straight from the oven, toaster, and Air Fryer!</p>
                     </div>
                 </div>
                 <div class="slides" style="--img: url('photos/img4.jpg')">
                     <div class="content">
                         <h2>Desserts</h2>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit magnam, doloremque maiores</p>
+                        <p>Enjoy our Freshly made desserts straight from the cows' utter!</p>
                     </div>
                 </div>
                 <div class="slides" style="--img: url('photos/img5.jpg')">
                     <div class="content">
                         <h2>Breakfast</h2>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit magnam, doloremque maiores</p>
+                        <p>Experience our Homemade breakfast delicacies with authentic Filipino recipes!</p>
                     </div>
                 </div>
                 <div class="slides" style="--img: url('photos/img6.jpg')">
                     <div class="content">
                         <h2>Shakes</h2>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit magnam, doloremque maiores</p>
+                        <p>Enjoy different variety of Fruit Shakes freshly picked from the tree itself!</p>
                     </div>
                 </div>
             </div>
@@ -101,38 +105,6 @@
     </footer>
 
 
-    <!-- LANDING PAGE SCRIPT -->
-
-    <script type="text/javascript">
-        function imgSlider(anything){
-            document.querySelector('.coffee').src = anything;
-        }
-    </script>
-  
-   <!--SLIDER SCRIPT-->
-    
-    <script>
-        let next = document.querySelector('.next');
-        let prev = document.querySelector('.prev');
-        let slider = document.querySelector('.slider');
-
-        next.addEventListener('click', function(){
-            let slides = document.querySelectorAll('.slides');
-            slider.appendChild(slides[0]);
-        })
-        prev.addEventListener('click', function(){
-            let slides = document.querySelectorAll('.slides');
-            slider.prepend(slides[slides.length - 1]);
-        })
-    </script>
-
-
-    <!-- Header Script -->
-    <script>
-        window.addEventListener("scroll",function(){
-            const header = document.querySelector('header');
-            header.classList.toggle('sticky',window.scrollY > 0)
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
