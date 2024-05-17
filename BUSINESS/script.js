@@ -22,7 +22,6 @@ window.addEventListener("scroll",function(){
     header.classList.toggle('sticky',window.scrollY > 0)
 });
 
-
 window.addEventListener('load', function() {
 	// Add 'loaded' class to body when content is loaded
 	document.body.classList.add('loaded');
